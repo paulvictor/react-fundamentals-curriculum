@@ -13,14 +13,12 @@ module.exports = React.createClass({
     if (this.state.isLoading){
       return <div> Loading </div>
     } else {
-      console.log(this.state.forecast)
       return (
       <div className="col-lg-12 text-center">
         <h2>{this.props.routeParams.city}</h2>
         <p/>
         <h3>Select a day</h3>
-        <WeatherForDays weathers = {this.state.forecast.list}/>
-
+        <WeatherForDays weathers = {this.state.forecast.list} city = {this.props.routeParams.city}/>
       </div>)
     }
   }
